@@ -38,7 +38,7 @@
         <div class="stories">
             @foreach($stories->reverse() as $story)
             <div class="card">
-                <a href="/story/{{ $story->id }}"></a>
+                <a href="story/{{ $story->id }}"></a>
                 <div class="card-body">
                     Som en {{ $story->role }} vill jag {{ $story->activity }} i {{ $story->context }} för att {{ $story->reason }}.
                 </div>
