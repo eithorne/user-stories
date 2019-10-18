@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <a href="/" class="back"><img src="/icons/chevron-right-solid.svg">Tillbaka</a>
+    <a href="/" class="back"><img src="icons/chevron-right-solid.svg">Tillbaka</a>
     <div class="box-container">
         <div class="card">
             <div class="card-body">

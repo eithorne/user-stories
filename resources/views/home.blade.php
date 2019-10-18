@@ -18,21 +18,21 @@
                 <div class="box-button-container">
                     <button type="submit">
                         Skicka
-                        <img src="/icons/chevron-right-solid.svg">
+                        <img src="icons/chevron-right-solid.svg">
                     </button>
                 </div>
             </form>
         </div>
         <div class="to-stories">
             <a href="#stories">
-                <img src="/icons/chevron-right-solid.svg">
+                <img src="icons/chevron-right-solid.svg">
             </a>
         </div>
     </div>
     <div id="stories" class="stories-container">
         <div class="to-inputs">
             <a href="#inputs">
-                <img src="/icons/chevron-right-solid.svg">
+                <img src="icons/chevron-right-solid.svg">
             </a>
         </div>
         <div class="stories">
