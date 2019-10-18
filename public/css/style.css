@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #eee;
+}
+
+input {
+  flex-grow: 1;
+  width: 100px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 18px;
+  color: #295646;
+  background-color: #eee;
+  border: none;
+  border-bottom: 2px solid #64b497;
+  border-radius: 5px 5px 0 0;
+  outline-color: #fff;
+  transition: outline-color 0.2s;
+}
+
+input:focus {
+  outline-color: #64b497;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #64b497;
+  border: none;
+  border-radius: 5px 5px 20px 5px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+button img {
+  position: relative;
+  top: 20px;
+  height: 1em;
+  margin-left: -10px;
+  opacity: 0;
+  transition: top 0.2s, margin-left 0.2s, opacity 0.2s;
+}
+
+button:hover {
+  background-color: #53ac8b;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #4b9a7d;
+}
+
+button:hover img,
+button:focus img {
+  top: 0;
+  margin-left: 5px;
+  opacity: 1;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+.box form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.box form > div {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.box form > div.box-input-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 40px;
+  border-radius: 10px 10px 0 10px;
+}
+
+.box form > div.box-button-container {
+  width: auto;
+  padding: 5px;
+  padding-top: 0;
+  text-align: right;
+  border-radius: 0 0 25px 10px;
+}
+
+.to-stories,
+.to-inputs {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+}
+
+.to-stories a,
+.to-inputs a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #64b497;
+  transition: background-color 0.2s;
+}
+
+.to-stories a:hover,
+.to-inputs a:hover {
+  background-color: #53ac8b;
+}
+
+.to-stories a img,
+.to-inputs a img {
+  height: 100%;
+}
+
+.to-stories {
+  bottom: 0;
+}
+
+.to-stories a {
+  padding: 15px 0 5px;
+  border-radius: 50px 50px 0 0;
+}
+
+.to-stories a img {
+  transform: rotate(90deg);
+}
+
+.to-inputs {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.to-inputs a {
+  padding: 5px 0 15px;
+  border-radius: 0 0 50px 50px;
+}
+
+.to-inputs a img {
+  transform: rotate(-90deg);
+}
+
+.stories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #4b9a7d;
+}
+
+.stories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card .card-body {
+  font-size: 18px;
+}
+
+.card .card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 5px;
+  color: #64b497;
+  border-top: 1px solid #64b497;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #64b497;
+  border-radius: 5px 5px 5px 20px;
+  transition: background-color 0.2s;
+}
+
+.back img {
+  position: relative;
+  top: 20px;
+  height: 1em;
+  margin-right: -10px;
+  opacity: 0;
+  transform: rotate(180deg);
+  transition: top 0.2s, margin-right 0.2s, opacity 0.2s;
+}
+
+.back:hover {
+  background-color: #53ac8b;
+}
+
+.back:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #4b9a7d;
+}
+
+.back:hover img,
+.back:focus img {
+  top: 0;
+  margin-right: 5px;
+  opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4b9a7d;
+  border: 6px solid #eee;
+}
+
