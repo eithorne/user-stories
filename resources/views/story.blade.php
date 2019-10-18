@@ -1,11 +1,11 @@
 @extends('layout')
 
 @section ('title')
-    Story #
+    Story # {{ $story->id }}
 @endsection
 
 @section('content')
-    <a href="/" class="back"><img src="icons/chevron-right-solid.svg">Tillbaka</a>
+    <a href="home" class="back"><img src="icons/chevron-right-solid.svg">Tillbaka</a>
     <div class="box-container">
         <div class="card">
             <div class="card-body">
