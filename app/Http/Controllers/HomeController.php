@@ -8,14 +8,14 @@ class HomeController extends Controller
 {
     public function loadHome()
     {
-        $stories = App\Story::all();
+        $stories = \App\Story::all();
 
         return view('home', ['stories' => $stories]);
     }
 
     public function saveStory(Request $request)
     {
-        $answers = new App\Story;
+        $answers = new \App\Story;
 
         $answers->role = request('role-input');
         $answers->activity = request('activity-input');
@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function loadStory($id)
     {
-        $story = App\Story::find($id);
+        $story = \App\Story::find($id);
         
         return view('story')->with('story', $story);
     }
