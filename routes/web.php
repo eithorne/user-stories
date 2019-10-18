@@ -13,12 +13,12 @@
 
 Route::get('/', 'HomeController@loadHome');
 
-Route::post('/submit', 'HomeController@saveStory');
+Route::post('submit', 'HomeController@saveStory');
 
-Route::get('/story', function(){
+Route::get('story', function(){
 
     return redirect('/#stories');
 
 });
 
-Route::get('/story/{id}', 'HomeController@loadStory');
+Route::get('story/{id}', 'HomeController@loadStory');

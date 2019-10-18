@@ -7,7 +7,7 @@
 @section('content')
     <div id="inputs" class="box-container">
         <div class="box">   
-            <form method="POST" action="/submit" autocomplete="off">
+            <form method="POST" action="submit" autocomplete="off">
                 @csrf
                 <div class="box-input-container">
                     Som en <input required name="role-input" type="text" placeholder="..."> 
